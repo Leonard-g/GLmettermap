@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Formulario</h1>
+	<form id="medidor-form" action="registro.php" method="POST">
+		<label for="medidor-input">Medidor:</label>
+		<input type="text" id="medidor-input" name="medidor" required pattern="^[a-zA-Z0-9 ]*$">
+		<label for="coordenadas-input">Coordenadas:</label>
+		<input type="text" id="coordenadas-input" name="coordenadas" required pattern="^-?[0-9]+\.[0-9]+,\s*-?[0-9]+\.[0-9]+$">
+		<button type="submit" id="agregar-btn">Agregar</button>
+		<input type="reset" id="limpiar-btn" value="Limpiar">
+	</form>
+	<div>
+		<label for="buscar-medidor-input">Buscar por número de medidor:</label>
+		<input type="text" id="buscar-medidor-input" name="buscarMedidor" pattern="^[a-zA-Z0-9 ]*$">
+		<button type="button" id="buscar-btn">Buscar</button>
+	</div>
+	<table id="medidores-table">
+		<thead>
+			<tr>
+				<th>Medidor</th>
+				<th>Coordenadas</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- aquí se agregarán las filas de los medidores -->
+		</tbody>
+	</table>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
